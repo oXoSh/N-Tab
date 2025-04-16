@@ -417,6 +417,9 @@ https://www.google.com | Google
                     if (title && typeof (title) !== undefined) {
                         title = title.replace(emojiReg, "");
                     }
+                    if (typeof (title) === "undefined" || title === "") {
+                        title = lineList[0];
+                    }
                     let tab = {"title": title, "url": lineList[0]}
                     tabsArr.push(tab);
                 }
